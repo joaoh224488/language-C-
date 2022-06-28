@@ -1,7 +1,7 @@
 #ifndef AVIAO_H_INCLUDED
 #define AVIAO_H_INCLUDED
 
-#include <string>
+
 
 class Aviao
 {
@@ -10,36 +10,41 @@ private:
 public:
 
     int vel = 0;
-    int velmax;
-    std::string tipo;
-    Aviao(int tp);
-    void imprimir();
-};
+    int velMax;
+    std:: string tipo;
 
-Aviao::Aviao(int tp)
+    Aviao(int tp);
+
+    void imprimir();
+    
+};
+// Método construtor:
+Aviao::Aviao(int tp) //  1- Jato; 2 - Monomotor; 3 - Planador
 {
     if (tp == 1){
         tipo = "Jato";
-        velmax = 800;
+        velMax = 800;
     }
     else if (tp == 2){
         tipo = "Monomotor";
-        velmax = 350;
+        velMax = 350;
     }
-    else if (tp == 3){
+    else if (tp == 3) {
         tipo = "Planador";
-        velmax = 180;
+        velMax = 180;
+    }
+    else{
+        tipo = "ERRO!";
+        velMax = -777;
+        vel = -888;
     }
 }
-
+// Método da classe:
 void Aviao::imprimir(){
-
-    std::cout << "Tipo:                 " << tipo << std::endl;
-    std::cout << "Velocidade Máxima:    " << velmax << std::endl;
-    std::cout << "Velocidade atual      " << vel << std::endl;
-    std:: cout << std :: endl;
+    std::cout << "Tipo:                      " << tipo << std::endl;
+    std::cout << "Velocidade Máxima:         " << velMax << std::endl;
+    std::cout << "Velocida atual:             " << vel << std::endl << std::endl;
 }
-
 
 
 #endif
