@@ -37,7 +37,7 @@ struct turma
 };
 
 void aluno :: falar_nome(){
-    cout << "Meu nome é     " << nome << "!\n";
+    cout << "Meu nome é " << nome << "!\n";
 }
 
 int main (){
